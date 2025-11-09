@@ -7,10 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GpRestaurant.ServiceDefaults\GpRestaurant.ServiceDefaults.csproj" />
+    <Compile Remove="NewFolder\**" />
+    <Content Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GpRestaurant.ServiceDefaults\GpRestaurant.ServiceDefaults.csproj" />
+  </ItemGroup>
+	
+  <ItemGroup>
+	<PackageReference Include="Dapr.AspNetCore" Version="1.*" />
+	<PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+	<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.6" />
   </ItemGroup>
 
 </Project>
